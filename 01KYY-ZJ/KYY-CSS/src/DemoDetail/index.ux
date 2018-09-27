@@ -1,0 +1,251 @@
+<template>
+  <!-- template里只能有一个根节点 -->
+  <div class="demo-page">
+      <text>1、flex-direction: row 默认横向布局</text>
+      <div style="height:100px;width: 750px;border: 1px solid #cccccc;">
+        <div style="height: 60px;width: 200px; background-color: red; "><text style="text-align: center;width: 100%;">123</text></div>
+        <div style="height: 60px;width: 200px; background-color: rgb(48, 51, 231); justify-content: center;"><text>456</text></div>
+        <div  style="height: 60px;width: 200px; background-color: rgb(48, 231, 140); justify-content: center;"><text>789</text></div>
+      </div>
+      <text>2、flex-direction: column 默认纵向布局</text>
+      <div style="height:300px;width: 750px;border: 1px solid #cccccc; flex-direction: column;">
+        <div style="height: 60px;width: 200px; background-color: red; "><text style="text-align: center;width: 100%;">123</text></div>
+        <div style="height: 60px;width: 200px; background-color: rgb(48, 51, 231); justify-content: center;"><text>456</text></div>
+        <div  style="height: 60px;width: 200px; background-color: rgb(48, 231, 140); justify-content: center;"><text>789</text></div>
+      </div>
+      <text>3、flex-direction: row  默认横向布局 </text>
+      <text>justify-content: flex-start 默认</text>
+      <div style="height:100px;width: 750px;border: 1px solid #cccccc;justify-content: flex-start;">
+        <div style="height: 60px;width: 200px; background-color: red; "><text style="text-align: center;width: 100%;">123</text></div>
+        <div style="height: 60px;width: 200px; background-color: rgb(48, 51, 231); justify-content: center;"><text>456</text></div>
+        <div  style="height: 60px;width: 200px; background-color: rgb(48, 231, 140); justify-content: center;"><text>789</text></div>
+      </div>
+      <text>4、flex-direction: row  默认横向布局 </text>
+      <text>justify-content: flex-end</text>
+      <div style="height:100px;width: 750px;border: 1px solid #cccccc;justify-content: flex-end;">
+        <div style="height: 60px;width: 200px; background-color: red; "><text style="text-align: center;width: 100%;">123</text></div>
+        <div style="height: 60px;width: 200px; background-color: rgb(48, 51, 231); justify-content: center;"><text>456</text></div>
+        <div  style="height: 60px;width: 200px; background-color: rgb(48, 231, 140); justify-content: center;"><text>789</text></div>
+      </div>
+
+      <text>5、flex-direction: row  默认横向布局 </text>
+      <text>justify-content: center</text>
+      <div style="height:100px;width: 750px;border: 1px solid #cccccc;justify-content: center;">
+        <div style="height: 60px;width: 200px; background-color: red; "><text style="text-align: center;width: 100%;">123</text></div>
+        <div style="height: 60px;width: 200px; background-color: rgb(48, 51, 231); justify-content: center;"><text>456</text></div>
+        <div  style="height: 60px;width: 200px; background-color: rgb(48, 231, 140); justify-content: center;"><text>789</text></div>
+      </div>
+
+      <text>6、flex-direction: row 默认横向布局 </text>
+      <text>justify-content: space-between</text>
+      <div style="height:100px;width: 750px;border: 1px solid #cccccc;justify-content: space-between;">
+        <div style="height: 60px;width: 200px; background-color: red; "><text style="text-align: center;width: 100%;">123</text></div>
+        <div style="height: 60px;width: 200px; background-color: rgb(48, 51, 231); justify-content: center;"><text>456</text></div>
+        <div  style="height: 60px;width: 200px; background-color: rgb(48, 231, 140); justify-content: center;"><text>789</text></div>
+      </div>
+
+      <text>7、flex-direction: column 纵向布局 </text>
+      <text>justify-content: flex-start 默认</text>
+      <div style="height:300px;width: 750px;border: 1px solid #cccccc;flex-direction: column;justify-content: flex-start;">
+        <div style="height: 60px;width: 200px; background-color: red; "><text style="text-align: center;width: 100%;">123</text></div>
+        <div style="height: 60px;width: 200px; background-color: rgb(48, 51, 231); justify-content: center;"><text>456</text></div>
+        <div  style="height: 60px;width: 200px; background-color: rgb(48, 231, 140); justify-content: center;"><text>789</text></div>
+      </div>
+
+      <text>8、flex-direction: column 纵向布局 </text>
+      <text>justify-content: flex-end </text>
+      <div style="height:300px;width: 750px;border: 1px solid #cccccc;flex-direction: column;justify-content: flex-end;">
+        <div style="height: 60px;width: 200px; background-color: red; "><text style="text-align: center;width: 100%;">123</text></div>
+        <div style="height: 60px;width: 200px; background-color: rgb(48, 51, 231); justify-content: center;"><text>456</text></div>
+        <div  style="height: 60px;width: 200px; background-color: rgb(48, 231, 140); justify-content: center;"><text>789</text></div>
+      </div>
+
+      <text>9、flex-direction: column 纵向布局 </text>
+      <text>justify-content: center </text>
+      <div style="height:300px;width: 750px;border: 1px solid #cccccc;flex-direction: column;justify-content: center;">
+        <div style="height: 60px;width: 200px; background-color: red; "><text style="text-align: center;width: 100%;">123</text></div>
+        <div style="height: 60px;width: 200px; background-color: rgb(48, 51, 231); justify-content: center;"><text>456</text></div>
+        <div  style="height: 60px;width: 200px; background-color: rgb(48, 231, 140); justify-content: center;"><text>789</text></div>
+      </div>
+
+      <text>10、flex-direction: column 纵向布局 </text>
+      <text>justify-content: space-between </text>
+      <div style="height:300px;width: 750px;border: 1px solid #cccccc;flex-direction: column;justify-content: space-between;">
+        <div style="height: 60px;width: 200px; background-color: red; "><text style="text-align: center;width: 100%;">123</text></div>
+        <div style="height: 60px;width: 200px; background-color: rgb(48, 51, 231); justify-content: center;"><text>456</text></div>
+        <div  style="height: 60px;width: 200px; background-color: rgb(48, 231, 140); justify-content: center;"><text>789</text></div>
+      </div>
+
+      <text>11、flex-direction: row 默认横向布局 </text>
+      <text>justify-content: flex-start </text>
+      <text>align-items: stretch </text>
+      <div style="height:300px;width: 750px;border: 1px solid #cccccc;flex-direction: row;justify-content: flex-start;align-items: stretch">
+        <div style="height: 60px;width: 200px; background-color: red; "><text style="text-align: center;width: 100%;">123</text></div>
+        <div style="height: 60px;width: 200px; background-color: rgb(48, 51, 231); justify-content: center;"><text>456</text></div>
+        <div  style="height: 60px;width: 200px; background-color: rgb(48, 231, 140); justify-content: center;"><text>789</text></div>
+      </div>
+
+      <text>12、flex-direction: row 默认横向布局 </text>
+      <text>justify-content: flex-start </text>
+      <text>align-items: flex-start </text>
+      <div style="height:300px;width: 750px;border: 1px solid #cccccc;flex-direction: row;justify-content: flex-start;align-items: flex-start">
+        <div style="height: 60px;width: 200px; background-color: red; "><text style="text-align: center;width: 100%;">123</text></div>
+        <div style="height: 60px;width: 200px; background-color: rgb(48, 51, 231); justify-content: center;"><text>456</text></div>
+        <div  style="height: 60px;width: 200px; background-color: rgb(48, 231, 140); justify-content: center;"><text>789</text></div>
+      </div>
+
+      <text>13、flex-direction: row 默认横向布局 </text>
+      <text>justify-content: flex-start </text>
+      <text>align-items: center </text>
+      <div style="height:300px;width: 750px;border: 1px solid #cccccc;flex-direction: row;justify-content: flex-start;align-items: center">
+        <div style="height: 60px;width: 200px; background-color: red; "><text style="text-align: center;width: 100%;">123</text></div>
+        <div style="height: 60px;width: 200px; background-color: rgb(48, 51, 231); justify-content: center;"><text>456</text></div>
+        <div  style="height: 60px;width: 200px; background-color: rgb(48, 231, 140); justify-content: center;"><text>789</text></div>
+      </div>
+      
+      <text>14、flex-direction: row 默认横向布局 </text>
+      <text>justify-content: flex-start </text>
+      <text>align-items: flex-end </text>
+      <div style="height:300px;width: 750px;border: 1px solid #cccccc;flex-direction: row;justify-content: flex-start;align-items: flex-end">
+        <div style="height: 60px;width: 200px; background-color: red; "><text style="text-align: center;width: 100%;">123</text></div>
+        <div style="height: 60px;width: 200px; background-color: rgb(48, 51, 231); justify-content: center;"><text>456</text></div>
+        <div  style="height: 60px;width: 200px; background-color: rgb(48, 231, 140); justify-content: center;"><text>789</text></div>
+      </div>
+
+      <text>15、flex-direction: row 默认横向布局 </text>
+      <text>justify-content: center </text>
+      <text>align-items: flex-start </text>
+      <div style="height:300px;width: 750px;border: 1px solid #cccccc;flex-direction: row;justify-content: center;align-items: flex-start">
+        <div style="height: 60px;width: 200px; background-color: red; "><text style="text-align: center;width: 100%;">123</text></div>
+        <div style="height: 60px;width: 200px; background-color: rgb(48, 51, 231); justify-content: center;"><text>456</text></div>
+        <div  style="height: 60px;width: 200px; background-color: rgb(48, 231, 140); justify-content: center;"><text>789</text></div>
+      </div>
+
+      <text>16、flex-direction: row 默认横向布局 </text>
+      <text>justify-content: flex-end </text>
+      <text>align-items: flex-start </text>
+      <div style="height:300px;width: 750px;border: 1px solid #cccccc;flex-direction: row;justify-content: flex-end;align-items: flex-start">
+        <div style="height: 60px;width: 200px; background-color: red; "><text style="text-align: center;width: 100%;">123</text></div>
+        <div style="height: 60px;width: 200px; background-color: rgb(48, 51, 231); justify-content: center;"><text>456</text></div>
+        <div  style="height: 60px;width: 200px; background-color: rgb(48, 231, 140); justify-content: center;"><text>789</text></div>
+      </div>
+
+      <text>17、flex-direction: column 默认纵向布局 </text>
+      <text>justify-content: flex-start </text>
+      <text>align-items: flex-start </text>
+      <div style="height:300px;width: 750px;border: 1px solid #cccccc;flex-direction: column;justify-content: flex-end;align-items: flex-start">
+        <div style="height: 60px;width: 200px; background-color: red; "><text style="text-align: center;width: 100%;">123</text></div>
+        <div style="height: 60px;width: 200px; background-color: rgb(48, 51, 231); justify-content: center;"><text>456</text></div>
+        <div  style="height: 60px;width: 200px; background-color: rgb(48, 231, 140); justify-content: center;"><text>789</text></div>
+      </div>
+
+      <text>18、flex-direction: column 默认纵向布局 </text>
+      <text>justify-content: center </text>
+      <text>align-items: flex-start </text>
+      <div style="height:300px;width: 750px;border: 1px solid #cccccc;flex-direction: column;justify-content: center;align-items: flex-start">
+        <div style="height: 60px;width: 200px; background-color: red; "><text style="text-align: center;width: 100%;">123</text></div>
+        <div style="height: 60px;width: 200px; background-color: rgb(48, 51, 231); justify-content: center;"><text>456</text></div>
+        <div  style="height: 60px;width: 200px; background-color: rgb(48, 231, 140); justify-content: center;"><text>789</text></div>
+      </div>
+
+      <text>19、flex-direction: column 默认纵向布局 </text>
+      <text>justify-content: flex-end </text>
+      <text>align-items: flex-start </text>
+      <div style="height:300px;width: 750px;border: 1px solid #cccccc;flex-direction: column;justify-content: flex-end;align-items: flex-start">
+        <div style="height: 60px;width: 200px; background-color: red; "><text style="text-align: center;width: 100%;">123</text></div>
+        <div style="height: 60px;width: 200px; background-color: rgb(48, 51, 231); justify-content: center;"><text>456</text></div>
+        <div  style="height: 60px;width: 200px; background-color: rgb(48, 231, 140); justify-content: center;"><text>789</text></div>
+      </div>
+
+      <text>20、flex-direction: column 默认纵向布局 </text>
+      <text>justify-content: stretch </text>
+      <text>align-items: flex-start </text>
+      <div style="height:300px;width: 750px;border: 1px solid #cccccc;flex-direction: column;justify-content: stretch;align-items: flex-start">
+        <div style="height: 60px;width: 200px; background-color: red; "><text style="text-align: center;width: 100%;">123</text></div>
+        <div style="height: 60px;width: 200px; background-color: rgb(48, 51, 231); justify-content: center;"><text>456</text></div>
+        <div  style="height: 60px;width: 200px; background-color: rgb(48, 231, 140); justify-content: center;"><text>789</text></div>
+      </div>
+
+      <text>21、flex-direction: column 默认纵向布局 </text>
+      <text>justify-content: flex-start </text>
+      <text>align-items: center </text>
+      <div style="height:300px;width: 750px;border: 1px solid #cccccc;flex-direction: column;justify-content: flex-start;align-items: center">
+        <div style="height: 60px;width: 200px; background-color: red; "><text style="text-align: center;width: 100%;">123</text></div>
+        <div style="height: 60px;width: 200px; background-color: rgb(48, 51, 231); justify-content: center;"><text>456</text></div>
+        <div  style="height: 60px;width: 200px; background-color: rgb(48, 231, 140); justify-content: center;"><text>789</text></div>
+      </div>
+
+      
+
+      <text>22、flex-direction: column 默认纵向布局 </text>
+      <text>justify-content: center </text>
+      <text>align-items: center </text>
+      <div style="height:300px;width: 750px;border: 1px solid #cccccc;flex-direction: column;justify-content: center;align-items: center">
+        <div style="height: 60px;width: 200px; background-color: red; "><text style="text-align: center;width: 100%;">123</text></div>
+        <div style="height: 60px;width: 200px; background-color: rgb(48, 51, 231); justify-content: center;"><text>456</text></div>
+        <div  style="height: 60px;width: 200px; background-color: rgb(48, 231, 140); justify-content: center;"><text>789</text></div>
+      </div>
+
+      <text>23、flex-direction: column 默认纵向布局 </text>
+      <text>justify-content: flex-end </text>
+      <text>align-items: center </text>
+      <div style="height:300px;width: 750px;border: 1px solid #cccccc;flex-direction: column;justify-content: flex-end;align-items: center">
+        <div style="height: 60px;width: 200px; background-color: red; "><text style="text-align: center;width: 100%;">123</text></div>
+        <div style="height: 60px;width: 200px; background-color: rgb(48, 51, 231); justify-content: center;"><text>456</text></div>
+        <div  style="height: 60px;width: 200px; background-color: rgb(48, 231, 140); justify-content: center;"><text>789</text></div>
+      </div>
+
+      <text>24、flex-direction: column 默认纵向布局 </text>
+      <text>justify-content: flex-start </text>
+      <text>align-items: flex-end </text>
+      <div style="height:300px;width: 750px;border: 1px solid #cccccc;flex-direction: column;justify-content: flex-start ;align-items: flex-end">
+        <div style="height: 60px;width: 200px; background-color: red; "><text style="text-align: center;width: 100%;">123</text></div>
+        <div style="height: 60px;width: 200px; background-color: rgb(48, 51, 231); justify-content: center;"><text>456</text></div>
+        <div  style="height: 60px;width: 200px; background-color: rgb(48, 231, 140); justify-content: center;"><text>789</text></div>
+      </div>
+
+      <text>25、flex-direction: column 默认纵向布局 </text>
+      <text>justify-content: center </text>
+      <text>align-items: flex-end </text>
+      <div style="height:300px;width: 750px;border: 1px solid #cccccc;flex-direction: column;justify-content: center;align-items: flex-end">
+        <div style="height: 60px;width: 200px; background-color: red; "><text style="text-align: center;width: 100%;">123</text></div>
+        <div style="height: 60px;width: 200px; background-color: rgb(48, 51, 231); justify-content: center;"><text>456</text></div>
+        <div  style="height: 60px;width: 200px; background-color: rgb(48, 231, 140); justify-content: center;"><text>789</text></div>
+      </div>
+
+      <text>26、flex-direction: column 默认纵向布局 </text>
+      <text>justify-content: flex-end </text>
+      <text>align-items: flex-end </text>
+      <div style="height:300px;width: 750px;border: 1px solid #cccccc;flex-direction: column;justify-content: flex-end;align-items: flex-end">
+        <div style="height: 60px;width: 200px; background-color: red; "><text style="text-align: center;width: 100%;">123</text></div>
+        <div style="height: 60px;width: 200px; background-color: rgb(48, 51, 231); justify-content: center;"><text>456</text></div>
+        <div  style="height: 60px;width: 200px; background-color: rgb(48, 231, 140); justify-content: center;"><text>789</text></div>
+      </div>
+  </div>
+</template>
+
+<style>
+  .demo-page {
+    flex-direction: column;
+  }
+
+  .title {
+    font-size: 40px;
+    text-align: center;
+  }
+</style>
+
+<script>
+  export default {
+    private: {
+      text: '欢迎打开详情页'
+    },
+    /**
+     * 当用户点击菜单按钮时触发，调用app中定义的方法showMenu
+     * 注意：使用加载器测试`创建桌面快捷方式`功能时，请先在`系统设置`中打开`应用加载器`的`桌面快捷方式`权限
+     */
+    onMenuPress() {
+      this.$app.$def.showMenu()
+    }
+  }
+</script>

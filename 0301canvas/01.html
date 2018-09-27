@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>01canvas</title>
+  <style media="screen">
+    #myCanvas{
+      box-shadow: 0 0 5px black;
+      margin-top: 50px;
+      margin-left: 50px;
+    }
+    #myCanvas2{
+      box-shadow: 0 0 5px salmon;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="myCanvas" width="500" height="500">
+  </canvas>
+</body>
+
+<script type="text/javascript">
+    // 获取 canvas 对象
+    var canvas = document.getElementById('myCanvas');
+    // 上下文 ： canvas 标签内置画笔
+    var ctx = canvas.getContext('2d') // 目前仅支持2的 画板
+
+    //线段方法
+
+    //1,新建一条路线
+    ctx.beginPath();
+    //2,设置起点画笔的点
+    ctx.moveTo(50, 50);
+    //3,设置另外一个点的坐标
+    ctx.lineTo(100, 100);
+    //设置地三个点
+    ctx.lineTo(200, 100);
+
+    // ctx.lineTo(50, 50) // 自己写闭合
+    //4.0闭合路径（不是必须的方法） 终点和起点关闭
+    ctx.closePath();
+    //4，绘制
+    ctx.stroke();
+
+
+
+</script>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <style>
+        body{
+            background: #dddddd;
+        }
+        #canvas{
+            margin: 10px;
+            padding: 10px;
+            background: #ffffff;
+            border:thin inset #aaaaaa;
+        }
+    </style>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <canvas id="canvas" width="600" height="300">
+            请下载支持 canvas 的浏览器
+        </canvas>
+        <script>
+            var canvas = document.getElementById('canvas')
+                context = canvas.getContext('2d');
+
+            context.font = '38pt Arial'
+            context.strokeStyle = 'red'   // （没有填色）文本颜色
+            context.fillStyle = '#3399ff' //  （有填色）文本颜色
+            
+            // text	规定在画布上输出的文本。
+            // x	开始绘制文本的 x 坐标位置（相对于画布）。
+            // y	开始绘制文本的 y 坐标位置（相对于画布）。
+            // maxWidth	可选，允许的最大文本宽度，以像素计。
+           
+            context.strokeText("Zhangzhengu", canvas.width/2 - 150, canvas.height/2 + 15) // 绘制文本（没有填色）  context.strokeText(text,x,y,maxWidth)
+            context.fillText("Zhangzhenguo", canvas.width/2 - 152, canvas.height/2 + 14)  // 绘制填色的文本   context.fillText(text,x,y,maxWidth)
+        </script>
+    </body>
+</html>

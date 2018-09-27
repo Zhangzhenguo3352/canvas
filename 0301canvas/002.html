@@ -1,0 +1,241 @@
+<!-- Template Section-->
+<script type="text/template" id="hotTemplate">
+    <div class="brand-hot-text">热门品牌</div>
+    <ul class="brand-hot-list clearfix">
+        {for(var k=0,kLen=data.length;k<kLen;k++){ var item=data[k]; } <li data-action="car" data-id="{=item.bs_Id}" data-name="{=item.bs_Name}">
+            <a href="javascript:;">
+                  <img src="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/100/m_{=item.bs_Id}_100.png" alt="" onerror="this.src='//img1.yixinfinance.com/images/img_logo_none.png'">
+                  <p>{=item.bs_Name}</p>
+             </a>
+            </li>
+            {}}
+    </ul>
+</script>
+<script type="text/template" id="brandTemplate">
+    {console.log(data); console.log(currentid);var MsterList=data.MsterList; for(var n in MsterList){}
+    <div class="brand-col clearfix">
+        <div class="brand-title-item" data-letter="{=n}">
+            {=n}
+        </div>
+        <div class="brand-col-list">
+            <ul>
+                { for(var i=0,thisMsterList=MsterList[n],thisLen=thisMsterList.length;i
+                <thisLen;i++){ } <li data-action="car" data-id="{=thisMsterList[i].Bs_Id}" data-name="{=thisMsterList[i].Bs_Name}">
+                    <a href="javascript:;">
+                        <div class="brand-col-img">
+                            <img src="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/100/m_{=thisMsterList[i].Bs_Id}_100.png" alt="" onerror="this.src='//img1.yixinfinance.com/images/img_logo_none.png'">
+                        </div>
+                        <span {=thisMsterList[i].Bs_Id.toString()==currentid? "class='colffd2'": ""}>{=thisMsterList[i].Bs_Name}</span>
+                    </a>
+                    </li>
+                    {}}
+            </ul>
+        </div>
+    </div>
+    {}}
+</script>
+ <script type="text/template" id="carTemplate">
+    {console.log(data);console.log(currentid); console.log(name); }
+    <div class="seller-nex-name">
+        <p><img src="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/100/m_{=pid}_100.png" alt=""></p>{=name}
+    </div>
+    <div class="seller-nex-no">
+        <a href="javascript:;" class="first-trigger" data-href="{=data[0].PUrl}" data-id="{=data[0].BrandId}" data-spell="{=data[0].PSpell}">不限车型</a>
+    </div>
+    <div class="seller-nex-list">
+        { for(var i = 0,len=data.length;i
+        <len; i++){ if(data[i].Child.length> 0){ }
+            <div class="seller-nex-title">
+                {= data[i].BrandName }
+            </div>
+            <div class="seller-nex-collist new-nex-chexi">
+                <ul>
+                    {for(var j = 0,thisList=data[i],thisChild=thisList.Child,lenChild=thisChild.length,url=thisList.Url;j
+                    <lenChild; j++){ } <li>
+                        <a class="nex-caraudi second-trigger" {=thisChild[j].CsId==currentid? 'class="colffd2 "': ''} data-id="{= thisChild[j].CsId}" data-href="{=url.format([thisChild[j].AllSpell])}"  data-spell="{=thisChild[j].AllSpell}" href="javascript:;">
+                {= thisChild[j].CsShowName }
+            </a>
+                        <a href="javascript:;" class="nex-carkuan" data-id="{= thisChild[j].CsId}" data-name="{= thisChild[j].CsShowName}" data-action="car-sub" data-href="{=url.format([thisChild[j].AllSpell])}">车款</a>
+                        </li>
+                        {}}
+                </ul>
+            </div>
+            {}} {}}
+    </div>
+</script>
+<!--三级选车-->
+ <script type="text/template" id="thirdTemplate">
+    <div class="seller-nex-carsele all-car-models" data-href="{=href}" data-len="{=kLen}">
+        <i class="nex-selebox "></i>全部车款
+    </div>
+    {
+      for(var n=0,nLen=data.sort.length;n<nLen;n++){
+         var item=data.sort[n];
+         var carList=data.list[item];
+      }
+    <div class="nex-sel-title">
+        {=item}款
+    </div>
+    <div class="nex-sel-carlist">
+        <ul class="all-year-wrapper" data-pid="{=item}" data-len={=carList.length}>
+            <li class="all-year" data-pid="{=item}">
+                <i class="nex-selebox"></i>
+                <em>{=item}款</em> 全部
+            </li>
+            { for(var k=0,len=carList.length;k
+            <len;k++){ var subItem=carList[k]; } <li data-pid="{=item}" class="item-clos" data-id="{=subItem.Car_Id}">
+                <i class="nex-selebox"></i>
+                <p>
+                    {=subItem.Car_Name}
+                    <span>新车指导价：{=subItem.Car_ReferPrice}万</span>
+                </p>
+                </li>
+                {}}
+        </ul>
+    </div>
+    {}}
+</script>
+<!-- 车龄，里程，排量,排放标准,燃料,国别,车身-->
+<script type="text/template" id="systemTemplate">
+    { for(var a=0,aLen=data.length;a
+    <aLen;a++){
+    var item=data[a];
+    var className=item.TagCode==current?'class="cur"':'';
+
+    } <li {=className}>
+        <a href="javascript:;" data-id="{=item.TagCode}" logwt="{=(logwt+item.TagCode)}">{=item.TagName}
+        </a>
+        </li>
+        {}}
+</script>
+
+<!-- 级别,驱动标准 -->
+<script type="text/template" id="customTemplate">
+    { for(var a=0,aLen=data.length;a
+    <aLen;a++){
+    var item=data[a];
+    var className=item.Id==current?'class="cur"':'';
+    }
+   <li  {=className}>
+        <a href="javascript:;" data-id="{=item.Id}" logwt="{=(logwt+item.Spell)}">
+                            <em class="car-{=item.Spell}"></em>
+                            <p class="col-txt">{=item.Name}</p>
+         </a>
+        </li>
+        {}}
+</script>
+
+<!-- 变速 -->
+<script type="text/template" id="carGearBoxTemplate">
+    { for(var a=0,aLen=data.length;a
+    <aLen;a++){
+     var item=data[a];
+     var className=item.Id==current?'class="cur"':'';
+      }
+    <li {=className}>
+        <a href="javascript:;"  data-id="{=item.Id}" logwt="wap_buycar_select_more_gearbox_{=item.Id}">{=item.Name}</a>
+        </li>
+        {}}
+</script>
+
+<!-- 驱动标准 -->
+<script type="text/template" id="carDriveTemplate">
+    { for(var a=0,aLen=data.length;a
+    <aLen;a++){
+    var item=data[a];
+    var className=item.Id==current?'class="cur"':'';
+    } <li {=className}>
+        <a href="javascript:;" data-id="{=item.Id}" logwt="wap_buycar_select_more_drive_{=item.Spell}" >{=item.Name}</a>
+        </li>
+        {}}
+</script>
+
+
+<!-- 颜色 -->
+<script type="text/template" id="carCarColorTemplate">
+    { for(var a=0,aLen=data.length;a
+    <aLen;a++){
+    var item=data[a];
+    var className=item.Id==current?'class="cur"':'';
+     }
+    <li {=className}>
+            <a href="javascript:;" data-id="{=item.Id}" logwt="wap_buycar_select_more_color_{=item.Spell}">
+                <em class="{=item.Spell}"></em>
+                <p class="col-txt">{=item.Name}</p>
+     </a>
+    </li>
+    {}}
+</script>
+
+<!-- 亮点配置 -->
+<script type="text/template" id="carHotConfigTemplate">
+    { for(var a=0,aLen=data.length;a<aLen;a++){
+    var item=data[a];
+    var className=arr.indexOf(String(item.CCDID))>-1?'class="cur"':'';
+     }
+    <li {=className}>
+        <a href="javascript:;"  data-id="{=item.CCDID}" logwt="wap_buycar_select_more_lightpoint_{=item.CCDID}">{=item.CCName}</a>
+    </li>
+{}}
+</script>
+<!-- 车源列表页面 -->
+<script type="text/template" id="carlist-templage">
+    {
+        for(var k=0,len=data.length;k<len;k++){
+         var item=data[k];
+    }
+  <li {=item.liid}>
+      <a href="{=item.url}" logwt="{=item.logwt}" {=item.vipwt}">
+                        <div class="car-img">
+                            <img src="//image.bitautoimg.com/taoche/2018_m_usedcar/list-img-bitmap-m.png"  data-src="{=item.imgsrc}" class="asynImg" onerror="this.src='//img8.taoche.cn/1d/02171gc4w3.jpg'" />
+                           {
+                              if (!!item.isdealerauthorized){
+                            }
+                                  <span class="car-ico">
+                                      {if(item.isdealerauthorized==1){}
+                                         <em class="new-ico-tcrz">淘车认证</em>
+                                        {} else if (item.isdealerauthorized==2000){}
+                                         <em class="new-ico-tczm">淘车直卖</em>
+                                      {}}
+
+                                </span>
+                             {}}
+
+
+                            {
+                             if (false&&!!item.loandailypay&&!!item.loandailypay){
+                            }
+                                   <i class="ygong-txt">日供{=item.loandailypay.toFixed(0)}元开回家</i>
+                           {}}
+                        </div>
+                        <div class="car-txt">
+                            <p class="name">{if(item.carflag==1){}<i class="list-jing"></i>{}else if(item.istop==1){}<i class="list-ding"></i>{}}{=item.carname}</p>
+                            <p class="time">{=item.buycardate } | {=item.mileage}  | {=item.cityname}</p>
+
+                            <p class="pri">
+                                {
+                                if (!!item.loanfirstpay&&!!item.loanfirstpay){
+                                }
+                                <i class="car-pri-s">{=item.carprice}万</i>首付{=item.loanfirstpaytext}
+                                {}else{}
+                                <i class="car-pri-s">{=item.carprice}万</i>
+                                {}}
+                            </p>
+
+                              {if (!!item.carlabel&& item.carlabel.length>0){}
+                                  <p class="ico-tab">
+                                {
+                                       var labelArr=item.carlabel;
+                                       for (var i=0,ken=labelArr.length;i<ken;i++){
+                                           var label=labelArr[i]
+                              }
+
+                                       <i>{=label.text}</i>
+                                      {}}
+                          </p>
+                             {}}
+                        </div>
+            </a>
+ </li>
+   {}}
+</script>
